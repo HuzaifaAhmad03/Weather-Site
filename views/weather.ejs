@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Weather App</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body background="" class="main" id="img-1">
+    <div>
+        <h1>The Temperature in <%= city %> is <%= temp %> Degree Celsius.</h1>
+        <h2 id="desc"><%= weatherDescription %></h2>
+        <img src="<%= iconURL %>">
+    </div>
+    <script>
+        var weatherDescription="<%= weatherDescription %>"
+        document.addEventListener("DOMContentLoaded", function() {
+            var bdy = document.querySelector(".main");
+            if (weatherDescription == "scattered clouds" || weatherDescription == "broken clouds" || weatherDescription == "few clouds") {
+                bdy.style.backgroundImage = "url(/scattered_clouds.jpg)";
+            }
+            else if (weatherDescription == "overcast clouds") {
+                bdy.style.backgroundImage = "url(/overcast_clouds.jpg)";
+            }
+            else if (weatherDescription == "clear sky") {
+                bdy.style.backgroundImage = "url(/clear_sky.jpg)";
+            }
+            else if (weatherDescription == "squalls"  || weatherDescription == "tornado" || weatherDescription=="sand/dust whirls") {
+                bdy.style.backgroundImage = "url(/tornado_sky.jpg)";
+            }
+            else if (weatherDescription == "mist"  || weatherDescription == "haze" || weatherDescription=="smoke" || weatherDescription=="fog") {
+                bdy.style.backgroundImage = "url(/mist_sky.jpg)";
+            }
+            else if (weatherDescription == "dust"  || weatherDescription == "sand") {
+                bdy.style.backgroundImage = "url(/sand_sky.jpg)";
+            }
+            else if (weatherDescription == "snow"  || weatherDescription == "light snow" || weatherDescription == "heavy snow" || weatherDescription == "sleet" || weatherDescription == "light shower sleet" || weatherDescription == "shower sleet" || weatherDescription == "light rain and snow" || weatherDescription == "rain and snow" || weatherDescription == "light shower snow" || weatherDescription == "shower snow" || weatherDescription == "heavy shower snow") {
+                bdy.style.backgroundImage = "url(/snow_sky.jpg)";
+            }
+            else if (weatherDescription.includes("rain")) {
+                bdy.style.backgroundImage = "url(/rain_sky.jpg)";
+            }
+            else if (weatherDescription.includes("drizzle")) {
+                bdy.style.backgroundImage = "url(/drizzle_sky.jpg)";
+            }
+            else if (weatherDescription.includes("thunderstorm")) {
+                bdy.style.backgroundImage = "url(/thunder_sky.jpg)";
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: montserrat, arial, verdana;
+}   
+
+.main{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+form , div{
+    width: 400px;
+    text-align: center;
+    background-color: rgba(252, 252, 252, 0.85);
+    border-radius: 15px;
+    padding: 40px;
+    box-shadow: rgba(72, 72, 77, 0.2) 0px 7px 29px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form:hover , div:hover{
+    background-color: rgba(252, 252, 252, 0.95);
+}
+
+label{
+    font-size: 20px;
+    color: #000000;
+    margin: 10px;
+    display: block;
+}
+
+input {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ccc;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    width: 100%;
+    margin-bottom: 10px;
+    color: white;
+    font-family: montserrat;
+    color: #2c3e50;
+    font-size: 20px;
+}
+
+button{
+    width: 100px;
+    background: #a639ff;
+    font-weight: bold;
+    color: white;
+    border: 0 none;
+    border-radius: 25px;
+    cursor: pointer;
+    padding: 10px 5px;
+    margin: 10px 5px;
+}
+
+button:hover {
+    background-color: #6c1dff;
+}
+
+h1 , h2{
+    font-size: 23px;
+    font-family: montserrat;
+}
